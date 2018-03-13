@@ -1,0 +1,10 @@
+-- extract zip file and add to eclipse
+
+-- open TestA.java file
+
+-- edit at line 37 : give path for result.xlsx file.
+
+-- edit at line 54 : give path for result.xlsx file.
+
+-- edit at line 73 : give path for price_data.xlsx file.
+

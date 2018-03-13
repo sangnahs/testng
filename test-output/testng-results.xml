@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="72695" started-at="2018-03-07T15:48:06Z" finished-at="2018-03-07T15:49:18Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="72695" started-at="2018-03-07T15:48:06Z" finished-at="2018-03-07T15:49:18Z">
+      <class name="TestCases.TestA">
+        <test-method status="PASS" signature="GoToAmazon_search_Filter()[pri:1, instance:TestCases.TestA@d8355a8]" name="GoToAmazon_search_Filter" duration-ms="33149" started-at="2018-03-07T21:18:06Z" finished-at="2018-03-07T21:18:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GoToAmazon_search_Filter -->
+        <test-method status="PASS" signature="Verify_Add_item()[pri:0, instance:TestCases.TestA@d8355a8]" name="Verify_Add_item" duration-ms="37731" started-at="2018-03-07T21:18:39Z" depends-on-methods="TestCases.TestA.GoToAmazon_search_Filter" finished-at="2018-03-07T21:19:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Add_item -->
+        <test-method status="PASS" signature="checkout_product()[pri:0, instance:TestCases.TestA@d8355a8]" name="checkout_product" duration-ms="1783" started-at="2018-03-07T21:19:17Z" depends-on-methods="TestCases.TestA.Verify_Add_item" finished-at="2018-03-07T21:19:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkout_product -->
+      </class> <!-- TestCases.TestA -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
