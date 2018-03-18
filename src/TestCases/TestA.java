@@ -104,7 +104,7 @@ public class TestA {
 		
 		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Pen drive");
 		driver.findElement(By.xpath("//span[@id='nav-search-submit-text']/following-sibling::input")).click();
-		String item = driver.findElement(By.xpath("//div[@id='searchTemplate']/descendant::a[contains(.,'Pen Drives')]")).getText();
+		String item = driver.findElement(By.xpath("//div[@id='searchTemplate']/descendant::a[3]")).getText();
 		if(item.equalsIgnoreCase("Pen Drives")){
 			Assert.assertTrue(true);
 		}
@@ -115,20 +115,60 @@ public class TestA {
 			Assert.assertTrue(false);
 		}
 		//Apply filter	
+		
+		//select checkbox sandisk
+		
+		List checkBox = driver.findElements(By.xpath("//h4[contains(text(),'Brand')]/following::ul[1]/div"));
+		int size_Brand = checkBox.size();
+		for(int i=1;i<=size_Brand;i++){
+	WebElement ele = driver.findElement(By.xpath("//h4[contains(text(),'Brand')]/following::ul[1]/div/li["+i+"]/descendant::span[3]/span"));		
+	String val = ele.getText();
+	if(val.equalsIgnoreCase("SanDisk") ){
+		
+		ele.click();
+		
+		
+	}
+		
+		}
+		Thread.sleep(5000);
+		
+		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		
+		String Brand = driver.findElement(By.xpath("//div[@id='searchTemplate']/descendant::a[4]")).getText();
+		
+		if(Brand.equalsIgnoreCase("SanDisk")){
+			
+			Assert.assertTrue(true);
+			result_val = true;
+		}
+		else{
+			
+			result_val = false;
+			Reason = "Error in selecting Brand";
+			test_result(testid, testName, "Failed", Reason);
+
+			Assert.assertTrue(false);
+
+
+		}
+
+		
+		
 		//input price range 300-1000
 
-				WebDriverWait wait = new WebDriverWait(driver, 50);
-			wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//input[@name='low-price']"))));
+		         //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+					Thread.sleep(1000);
 
 				driver.findElement(By.xpath("//input[@name='low-price']")).sendKeys(lowPrice);
 				driver.findElement(By.xpath("//input[@name='high-price']")).sendKeys(highPrice);
 				driver.findElement(By.xpath("//span[contains(.,'Go')]/span/input[@value='Go']")).click();
 				
-				//select Brand: SanDisk
 				
-				Thread.sleep(5000);
+				//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				Thread.sleep(2000);
 				
-				String price = driver.findElement(By.xpath("//div[@id='searchTemplate']/descendant::a[contains(.,'₹300 - ₹1,000')]")).getText();
+				String price = driver.findElement(By.xpath("//div[@id='searchTemplate']/descendant::a[5]")).getText();
 				if(price.equalsIgnoreCase("₹300 - ₹1,000")){
 					
 					Assert.assertTrue(true);
@@ -144,43 +184,9 @@ public class TestA {
 
 				}
 				
-				//select checkbox sandisk
 				
-						List checkBox = driver.findElements(By.xpath("//h4[contains(text(),'Brand')]/following::ul[1]/div"));
-						int size_Brand = checkBox.size();
-						for(int i=1;i<=size_Brand;i++){
-					WebElement ele = driver.findElement(By.xpath("//h4[contains(text(),'Brand')]/following::ul[1]/div/li["+i+"]/descendant::span[3]/span"));		
-					String val = ele.getText();
-					if(val.equalsIgnoreCase("SanDisk") ){
-						
-						ele.click();
-						
-						
-					}
-						
-						}
-		//Select user rating 4 and up
 				
-			Thread.sleep(5000);
 			
-			String Brand = driver.findElement(By.xpath("//div[@id='searchTemplate']/descendant::a[contains(.,'SanDisk')]")).getText();
-			
-			if(Brand.equalsIgnoreCase("SanDisk")){
-				
-				Assert.assertTrue(true);
-				result_val = true;
-			}
-			else{
-				
-				result_val = false;
-				Reason = "Error in selecting Brand";
-				test_result(testid, testName, "Failed", Reason);
-
-				Assert.assertTrue(false);
-
-
-			}
-
 // Select user rating 4 and up		
 		List userRating = driver.findElements(By.xpath("//h4[contains(text(),'Avg. Customer Review')]/following::ul[1]/div"));
 		int size_userRating = userRating.size();
@@ -196,9 +202,10 @@ public class TestA {
 		}
 		
 	
-		Thread.sleep(5000);
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 		
-		String rating = driver.findElement(By.xpath("//div[@id='searchTemplate']/descendant::a[contains(.,'4 Stars & Up')]")).getText();
+		String rating = driver.findElement(By.xpath("//div[@id='searchTemplate']/descendant::a[6]")).getText();
 		
 		if(rating.equalsIgnoreCase("4 Stars & Up")){
 			
@@ -253,7 +260,8 @@ public class TestA {
 
 	for(int i=1;i< resultList.size();i++){		
 		
-		Thread.sleep(1000);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//Thread.sleep(500);
 		WebElement ele = driver.findElement(By.xpath("//div[@id='atfResults']/ul/li["+i+"]/descendant::span[@class='currencyINR'][1]/parent::span"));
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOf(ele));
@@ -278,7 +286,8 @@ public class TestA {
 	//add selected pen drive
 
 String currentWindowHandle = driver.getWindowHandle();
-Thread.sleep(5000);
+driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+
 double min_2 = min_1 - (long)min_1;
 if(min_2 == 0){
 	WebElement ele1 = driver.findElement(By.xpath("//div[@id='atfResults']/ul/li/descendant::span[@class='currencyINR'][1]/parent::span[contains(.,'"+(int)min_1+"')]"));
@@ -299,7 +308,8 @@ else{
    		driver.switchTo().window(window);
    	}
    }
-    Thread.sleep(5000);
+	//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    Thread.sleep(1000);
     
     driver.findElement(By.xpath("//input[@title='Add to Shopping Cart']")).click();
     
