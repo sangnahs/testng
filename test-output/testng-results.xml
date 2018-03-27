@@ -2,24 +2,67 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="72695" started-at="2018-03-07T15:48:06Z" finished-at="2018-03-07T15:49:18Z">
+  <suite name="Default suite" duration-ms="26769" started-at="2018-03-27T04:42:45Z" finished-at="2018-03-27T04:43:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="72695" started-at="2018-03-07T15:48:06Z" finished-at="2018-03-07T15:49:18Z">
-      <class name="TestCases.TestA">
-        <test-method status="PASS" signature="GoToAmazon_search_Filter()[pri:1, instance:TestCases.TestA@d8355a8]" name="GoToAmazon_search_Filter" duration-ms="33149" started-at="2018-03-07T21:18:06Z" finished-at="2018-03-07T21:18:39Z">
+    <test name="Default test" duration-ms="26769" started-at="2018-03-27T04:42:45Z" finished-at="2018-03-27T04:43:12Z">
+      <class name="TestCases.TESTB">
+        <test-method status="PASS" signature="Go_to_amazon()[pri:0, instance:TestCases.TESTB@6f7fd0e6]" name="Go_to_amazon" is-config="true" duration-ms="8457" started-at="2018-03-27T10:12:45Z" finished-at="2018-03-27T10:12:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Go_to_amazon -->
+        <test-method status="PASS" signature="GoToAmazon_search_Filter(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestCases.TESTB@6f7fd0e6]" name="GoToAmazon_search_Filter" duration-ms="10494" started-at="2018-03-27T10:12:54Z" data-provider="Data" finished-at="2018-03-27T10:13:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[pendrives]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SanDisk]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[300]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[4 Stars & Up]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GoToAmazon_search_Filter -->
-        <test-method status="PASS" signature="Verify_Add_item()[pri:0, instance:TestCases.TestA@d8355a8]" name="Verify_Add_item" duration-ms="37731" started-at="2018-03-07T21:18:39Z" depends-on-methods="TestCases.TestA.GoToAmazon_search_Filter" finished-at="2018-03-07T21:19:17Z">
+        <test-method status="PASS" signature="test_result()[pri:0, instance:TestCases.TESTB@6f7fd0e6]" name="test_result" is-config="true" duration-ms="177" started-at="2018-03-27T10:13:05Z" finished-at="2018-03-27T10:13:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_result -->
+        <test-method status="PASS" signature="Verify_Add_item()[pri:0, instance:TestCases.TESTB@6f7fd0e6]" name="Verify_Add_item" duration-ms="5218" started-at="2018-03-27T10:13:05Z" depends-on-methods="TestCases.TESTB.GoToAmazon_search_Filter" finished-at="2018-03-27T10:13:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_Add_item -->
-        <test-method status="PASS" signature="checkout_product()[pri:0, instance:TestCases.TestA@d8355a8]" name="checkout_product" duration-ms="1783" started-at="2018-03-07T21:19:17Z" depends-on-methods="TestCases.TestA.Verify_Add_item" finished-at="2018-03-07T21:19:18Z">
+        <test-method status="PASS" signature="test_result()[pri:0, instance:TestCases.TESTB@6f7fd0e6]" name="test_result" is-config="true" duration-ms="62" started-at="2018-03-27T10:13:10Z" finished-at="2018-03-27T10:13:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_result -->
+        <test-method status="PASS" signature="checkout_product()[pri:0, instance:TestCases.TESTB@6f7fd0e6]" name="checkout_product" duration-ms="1536" started-at="2018-03-27T10:13:10Z" depends-on-methods="TestCases.TESTB.Verify_Add_item" finished-at="2018-03-27T10:13:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkout_product -->
-      </class> <!-- TestCases.TestA -->
+        <test-method status="PASS" signature="test_result()[pri:0, instance:TestCases.TESTB@6f7fd0e6]" name="test_result" is-config="true" duration-ms="108" started-at="2018-03-27T10:13:12Z" finished-at="2018-03-27T10:13:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_result -->
+      </class> <!-- TestCases.TESTB -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

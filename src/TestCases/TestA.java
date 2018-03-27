@@ -70,7 +70,7 @@ public class TestA {
 		boolean result_val;
 		
 		//give path of price_data.xlsx file to fetch low  and high price values
-		FileInputStream fis = new FileInputStream("C://Users//c5253597//workspace//Automation_assignment//Excel_Files//Price_data.xlsx");
+		FileInputStream fis = new FileInputStream("C://Users//c5253597//workspace//Automation_assignment//Excel_Files//data.xlsx");
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
 		XSSFSheet sheet = wb.getSheet("Sheet1");
 		XSSFCell low_price =  sheet.getRow(1).getCell(0);
