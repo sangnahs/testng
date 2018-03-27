@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="28927" started-at="2018-03-27T05:12:31Z" finished-at="2018-03-27T05:13:00Z">
+  <suite name="Default suite" duration-ms="34338" started-at="2018-03-27T05:34:00Z" finished-at="2018-03-27T05:34:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="28927" started-at="2018-03-27T05:12:31Z" finished-at="2018-03-27T05:13:00Z">
+    <test name="Default test" duration-ms="34338" started-at="2018-03-27T05:34:00Z" finished-at="2018-03-27T05:34:34Z">
       <class name="TestCases.TESTB">
-        <test-method status="PASS" signature="Go_to_amazon()[pri:0, instance:TestCases.TESTB@47c62251]" name="Go_to_amazon" is-config="true" duration-ms="8667" started-at="2018-03-27T10:42:31Z" finished-at="2018-03-27T10:42:40Z">
+        <test-method status="PASS" signature="Go_to_amazon()[pri:0, instance:TestCases.TESTB@47c62251]" name="Go_to_amazon" is-config="true" duration-ms="11670" started-at="2018-03-27T11:04:00Z" finished-at="2018-03-27T11:04:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Go_to_amazon -->
-        <test-method status="PASS" signature="GoToAmazon_search_Filter(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestCases.TESTB@47c62251]" name="GoToAmazon_search_Filter" duration-ms="10734" started-at="2018-03-27T10:42:41Z" data-provider="Data" finished-at="2018-03-27T10:42:52Z">
+        <test-method status="PASS" signature="GoToAmazon_search_Filter(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestCases.TESTB@47c62251]" name="GoToAmazon_search_Filter" duration-ms="10998" started-at="2018-03-27T11:04:13Z" data-provider="Data" finished-at="2018-03-27T11:04:24Z">
           <params>
             <param index="0">
               <value>
@@ -42,27 +42,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GoToAmazon_search_Filter -->
-        <test-method status="PASS" signature="test_result()[pri:0, instance:TestCases.TESTB@47c62251]" name="test_result" is-config="true" duration-ms="225" started-at="2018-03-27T10:42:52Z" finished-at="2018-03-27T10:42:52Z">
+        <test-method status="PASS" signature="test_result()[pri:0, instance:TestCases.TESTB@47c62251]" name="test_result" is-config="true" duration-ms="239" started-at="2018-03-27T11:04:24Z" finished-at="2018-03-27T11:04:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_result -->
-        <test-method status="PASS" signature="Verify_Add_item()[pri:0, instance:TestCases.TESTB@47c62251]" name="Verify_Add_item" duration-ms="5942" started-at="2018-03-27T10:42:52Z" depends-on-methods="TestCases.TESTB.GoToAmazon_search_Filter" finished-at="2018-03-27T10:42:58Z">
+        <test-method status="PASS" signature="Verify_Add_item()[pri:0, instance:TestCases.TESTB@47c62251]" name="Verify_Add_item" duration-ms="6361" started-at="2018-03-27T11:04:24Z" depends-on-methods="TestCases.TESTB.GoToAmazon_search_Filter" finished-at="2018-03-27T11:04:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_Add_item -->
-        <test-method status="PASS" signature="test_result()[pri:0, instance:TestCases.TESTB@47c62251]" name="test_result" is-config="true" duration-ms="56" started-at="2018-03-27T10:42:58Z" finished-at="2018-03-27T10:42:58Z">
+        <test-method status="PASS" signature="test_result()[pri:0, instance:TestCases.TESTB@47c62251]" name="test_result" is-config="true" duration-ms="76" started-at="2018-03-27T11:04:30Z" finished-at="2018-03-27T11:04:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_result -->
-        <test-method status="PASS" signature="checkout_product()[pri:0, instance:TestCases.TESTB@47c62251]" name="checkout_product" duration-ms="1259" started-at="2018-03-27T10:42:58Z" depends-on-methods="TestCases.TESTB.Verify_Add_item" finished-at="2018-03-27T10:42:59Z">
+        <test-method status="PASS" signature="checkout_product()[pri:0, instance:TestCases.TESTB@47c62251]" name="checkout_product" duration-ms="1128" started-at="2018-03-27T11:04:30Z" depends-on-methods="TestCases.TESTB.Verify_Add_item" finished-at="2018-03-27T11:04:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkout_product -->
-        <test-method status="PASS" signature="test_result()[pri:0, instance:TestCases.TESTB@47c62251]" name="test_result" is-config="true" duration-ms="104" started-at="2018-03-27T10:42:59Z" finished-at="2018-03-27T10:42:59Z">
+        <test-method status="PASS" signature="test_result()[pri:0, instance:TestCases.TESTB@47c62251]" name="test_result" is-config="true" duration-ms="118" started-at="2018-03-27T11:04:31Z" finished-at="2018-03-27T11:04:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_result -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:TestCases.TESTB@47c62251]" name="closeBrowser" is-config="true" duration-ms="1226" started-at="2018-03-27T10:42:59Z" finished-at="2018-03-27T10:43:00Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:TestCases.TESTB@47c62251]" name="closeBrowser" is-config="true" duration-ms="2705" started-at="2018-03-27T11:04:32Z" finished-at="2018-03-27T11:04:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
