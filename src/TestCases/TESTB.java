@@ -21,7 +21,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.AssertJUnit;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -356,6 +358,12 @@ public class TESTB {
 			FileOutputStream fos = new FileOutputStream("C://Users//c5253597//workspace//Automation_assignment//Excel_Files//Result.xlsx");
 			wb.write(fos);
 			fos.close();
+		}
+		
+		
+		@AfterClass
+		public void closeBrowser(){
+			driver.quit();
 		}
 	
 }
