@@ -131,32 +131,7 @@ public class TESTB {
 
 					}
 					
-				/*	//input price range 300-1000
-
-			         //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-						Thread.sleep(1000);
-
-					driver.findElement(By.xpath("//input[@name='low-price']")).sendKeys(lowPrice);
-					driver.findElement(By.xpath("//input[@name='high-price']")).sendKeys(HighPrice);
-					driver.findElement(By.xpath("//span[contains(.,'Go')]/span/input[@value='Go']")).click();
-					
-					
-					//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-					Thread.sleep(2000);
-					
-					String price = driver.findElement(By.xpath("//div[@id='searchTemplate']/descendant::a[5]")).getText();
-					if(price.equalsIgnoreCase("₹300 - ₹1,000")){
-						Result = "Passed";
-						Assert.assertTrue(true);
-					}
-					else{
-						Result ="Failed";
-						Reason = "Error in Price Range";
-
-						Assert.assertTrue(false);
-
-					}
-					*/
+			
 					// Select user rating 4 and up		
 					List userRating = driver.findElements(By.xpath("//h4[contains(text(),'Avg. Customer Review')]/following::ul[1]/div"));
 					int size_userRating = userRating.size();
@@ -189,8 +164,35 @@ public class TESTB {
 						Assert.assertTrue(false);
 
 					}
+					/*
+						//input price range 300-1000
+
+			         //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+						Thread.sleep(1000);
+
+					driver.findElement(By.xpath("//input[@name='low-price']")).sendKeys(lowPrice);
+					driver.findElement(By.xpath("//input[@name='high-price']")).sendKeys(HighPrice);
+					driver.findElement(By.xpath("//span[contains(.,'Go')]/span/input[@value='Go']")).click();
 					
-			
+					
+					//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+					Thread.sleep(2000);
+					
+					String price = driver.findElement(By.xpath("//div[@id='searchTemplate']/descendant::a[6]")).getText();
+					if(price.equalsIgnoreCase("₹300 - ₹1,000")){
+						Result = "Passed";
+						Assert.assertTrue(true);
+					}
+					else{
+						Result ="Failed";
+						Reason = "Error in Price Range";
+
+						Assert.assertTrue(false);
+
+					}
+					
+					
+			*/
 			
 		}
 		
